@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from '../src/Link';
 import Lottie from 'react-lottie';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
@@ -129,11 +130,25 @@ const LandingPage = ({ setValue, setSelectedIndex }) => {
 
   return (
     <Grid container direction="column" className={classes.mainContainer}>
+      <Head>
+        <title key="title">
+          Custom Software, Mobile Apps and Websites | Arc Development
+        </title>
+        <meta
+          name="description"
+          key="description"
+          content="Let us guide you through the custom software design and development process. Send us a message with any of your ideas or questions to get started"
+        />
+        <meta
+          property="og:title"
+          content="Bringing West Coast Technology to the Midwest | Arc Development"
+        />
+      </Head>
       <Grid item>
         {/*---------- Hero Block ----------*/}
         <Grid container justify="flex-end" alignItems="center" direction="row">
           <Grid sm item className={classes.heroTextContainer}>
-            <Typography variant="h2" align="center">
+            <Typography variant="h1" align="center">
               Bring West Coast Technology
               <br /> to the Midwest
             </Typography>
@@ -395,7 +410,7 @@ const LandingPage = ({ setValue, setSelectedIndex }) => {
                 style={{ marginBottom: matchesXS ? '10em' : 0 }}
                 direction="column"
               >
-                <Typography variant="h2" style={{ color: 'white' }}>
+                <Typography variant="h1" style={{ color: 'white' }}>
                   About Us
                 </Typography>
                 <Typography variant="subtitle2">Let's get personal.</Typography>
@@ -423,7 +438,7 @@ const LandingPage = ({ setValue, setSelectedIndex }) => {
               }}
             >
               <Grid container direction="column">
-                <Typography variant="h2" style={{ color: 'white' }}>
+                <Typography variant="h1" style={{ color: 'white' }}>
                   Contact Us
                 </Typography>
                 <Typography variant="subtitle2">

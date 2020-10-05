@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from '../src/Link';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -46,6 +47,20 @@ export default function Services(props) {
 
   return (
     <Grid container direction="column">
+      <Head>
+        <title key="title">
+          Top Custom Software Devlopment Services | Arc Development
+        </title>
+        <meta
+          name="description"
+          key="description"
+          content="Let us guide you through the custom software design and development process. Send us a message with any of your ideas or questions to get started"
+        />
+        <meta
+          property="og:title"
+          content="Bringing West Coast Technology to the Midwest | Arc Development"
+        />
+      </Head>
       <Grid
         item
         style={{
@@ -55,7 +70,7 @@ export default function Services(props) {
       >
         <Typography
           align={matchesSM ? 'center' : undefined}
-          variant="h2"
+          variant="h1"
           gutterBottom
         >
           Services
